@@ -15,6 +15,7 @@ import cv2
 app = FastAPI(title='Plant Disease Detection',
               description="API for detecting plant diseases", version="1.0", debug=True)
 
+
 origins = [
     "http://localhost",
     "http://localhost:3000",
