@@ -1,6 +1,6 @@
 
 .container1{
-    background-color: pink;
+    
     padding: 3rem;
     height: auto;
     width: 100%;
@@ -36,7 +36,7 @@ h1{
 
 .c1{
     border-width: 0.5rem;
-    background-color: white;
+    background-color: lightgrey;
     width: 12rem;
     height: 14rem;
     border-radius: 0.5rem;
