@@ -21,6 +21,6 @@ export const commonStyles=StyleSheet.create({
         color:PRIMARY_ACCENT,
         fontSize:24,
         fontWeight:'bold',
-        marginVertical:2
+        marginVertical:8
     }
 })
