@@ -52,7 +52,7 @@ export const HomeTabNavigator=()=>{
             
             headerShown: false,
             tabBarStyle: {
-              backgroundColor: '#121212',
+              backgroundColor: '#FAFAFA',
               height: Platform.OS === 'android' ? 60 : 80,
               
             },
