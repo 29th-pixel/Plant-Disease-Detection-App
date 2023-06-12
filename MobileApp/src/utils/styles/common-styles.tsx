@@ -6,7 +6,8 @@ export const commonStyles=StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor:PRIMARY_WHITE
+        backgroundColor:PRIMARY_WHITE,
+        paddingHorizontal:8
     },
     image:{
         borderRadius:4,

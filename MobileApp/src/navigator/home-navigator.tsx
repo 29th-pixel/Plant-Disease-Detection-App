@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import { HomeScreen,DiseaseDetectorScreen,ContactScreen } from "../screens/home";
 
-type HomeStackParamList={
+export type HomeStackParamList={
     HomeScreen:undefined;
     DiseaseDetectorScreen:undefined;
 }
