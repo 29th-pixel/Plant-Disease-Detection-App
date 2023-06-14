@@ -20,15 +20,15 @@ const HomeScreen = ({navigation}:{navigation:NavigationProp<HomeStackParamList>}
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 1,
     shadowRadius: 8,
-    elevation: 3,
+    elevation: 16,
     position:'absolute',
-    bottom:4,
-    right:4}
+    bottom:16,
+    right:16}
 
   return (
     <SafeAreaProvider style={[commonStyles.parentContainer]}>
       <ScrollView contentContainerStyle={styles.scrollview}>
-        <Text style={[commonStyles.titleText]}>🏵️Plant Disease Detection🏵️</Text>
+        <Text style={[commonStyles.titleText]}>🏵️ Plant Disease Detection 🏵️</Text>
         <Text style={[commonStyles.text,styles.description]}>Plant Disease Detection is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using Convolutional Neural Network for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset</Text>
 
         <View style={{ width:'90%' }}>
@@ -47,7 +47,7 @@ const HomeScreen = ({navigation}:{navigation:NavigationProp<HomeStackParamList>}
           })}
         </View>
       </ScrollView>
-      <Button title='Try It' style={buttonStyle} onPress={()=>{navigation.navigate('DiseaseDetectorScreen')}} />
+      <Button title='Try It !!' style={buttonStyle} onPress={()=>{navigation.navigate('DiseaseDetectorScreen')}} />
     </SafeAreaProvider>
   )
 }
