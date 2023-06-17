@@ -33,11 +33,11 @@ app.add_middleware(
 )
 
 diseaseInfoPath = os.path.dirname(os.getcwd()).replace(
-    '\\', '/') + '/Plant-Disease-Detection-App/BackEnd/assets/disease_info.csv'
+    '\\', '/') + '/BackEnd/assets/disease_info.csv'
 supplementInfoPath = os.path.dirname(os.getcwd()).replace(
-    '\\', '/') + '/Plant-Disease-Detection-App/BackEnd/assets/supplement_info.csv'
+    '\\', '/') + '/BackEnd/assets/supplement_info.csv'
 modelPath = os.path.dirname(os.getcwd()).replace(
-    '\\', '/') + '/Plant-Disease-Detection-App/BackEnd/assets/plant_disease_model_1_latest.pt'
+    '\\', '/') + '/BackEnd/assets/plant_disease_model_1_latest.pt'
 diseaseInfo = pd.read_csv(diseaseInfoPath, encoding='cp1252')
 supplementInfo = pd.read_csv(supplementInfoPath, encoding='cp1252')
 
