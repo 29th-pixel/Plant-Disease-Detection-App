@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, ScrollView, View, Text, TouchableOpacity,StyleSheet,Image } from 'react-native';
 import type { outputData } from '../screens/home/disease-detector';
+import { TITLE_COLOR,TEXT_COLOR } from '../utils/constants/colors';
 
 type OutputModalProps={
     visible:boolean;
@@ -19,19 +20,12 @@ const OutputModal:React.FC<OutputModalProps> = ({ visible, onClose, output }) =>
             <Text style={styles.closeButtonText}>X</Text>
           </TouchableOpacity>
           <ScrollView style={styles.scrollView}>
-                <View>
-                <View>
-                    <View>
-                    <Text>
+                <View style={styles.parentView}>
+                    
+                    <Text style={styles.title}>
                         {output?.title}🍂
-                    </Text>
-                    </View>
-                    {/* <br /> */}
-                    <View>
-                    <Image source={{uri:output?.image_url}} />
-                    </View>
-
-                    {/* <br /> */}
+                    </Text>                    
+                    <Image source={{uri:output?.image_url}} style={styles.image} />
                     <View>
                     <View>
                         <Text>
@@ -47,12 +41,12 @@ const OutputModal:React.FC<OutputModalProps> = ({ visible, onClose, output }) =>
                         output?.pred === 25 ||
                         output?.pred === 28 ||
                         output?.pred === 38 ? (
-                            <Text> Tips to Grow Healthy Plants :</Text>
+                            <Text style={styles.subTitle}> Tips to Grow Healthy Plants :</Text>
                         ) : (
-                            <Text>Brief Descritpion :</Text>
+                            <Text style={styles.subTitle}>Brief Descritpion :</Text>
                         )}
                         </Text>
-                        <Text>{output?.desc}</Text>
+                        <Text style={styles.paragraph}>{output?.desc}</Text>
                     </View>
 
                     <View>
@@ -69,12 +63,12 @@ const OutputModal:React.FC<OutputModalProps> = ({ visible, onClose, output }) =>
                         output?.pred === 25 ||
                         output?.pred === 28 ||
                         output?.pred === 38 ? (
-                            <Text> Benefits :</Text>
+                            <Text style={styles.subTitle}> Benefits :</Text>
                         ) : (
-                            <Text>Prevent This Plant Disease By follow below steps :</Text>
+                            <Text style={styles.subTitle}>Prevent This Plant Disease By follow below steps :</Text>
                         )}
                         </Text>
-                        <Text>{output?.prevention}</Text>
+                        <Text style={styles.paragraph}>{output?.prevention}</Text>
                     </View>
                     </View>
 
@@ -94,20 +88,20 @@ const OutputModal:React.FC<OutputModalProps> = ({ visible, onClose, output }) =>
                             output?.pred === 25 ||
                             output?.pred === 28 ||
                             output?.pred === 38 ? (
-                            <Text> Fertilizer :</Text>
+                            <Text style={styles.subTitle}> Fertilizer :</Text>
                             ) : (
-                            <Text>Supplements :</Text>
+                            <Text style={styles.subTitle}>Supplements :</Text>
                             )}
                         </Text>
 
-                        <Text>{output?.sname}</Text>
+                        <Text style={styles.paragraph}>{output?.sname}</Text>
                         </>
                     ) : (
                         <View></View>
                     )}
                     </Text>
                 </View>
-                </View>
+                
           </ScrollView>
         </View>
       </View>
@@ -144,7 +138,30 @@ const styles =StyleSheet.create({
   paragraph: {
     fontSize: 16,
     marginBottom: 10,
+    marginVertical:8,
+    color:TEXT_COLOR
   },
+  title:{
+    color:TITLE_COLOR,
+    fontSize:20,
+    fontWeight:'bold',
+    marginVertical:4
+  },
+  image:{
+    height:120,
+    width:120,
+    borderRadius:8,
+    marginVertical:8
+  },
+  subTitle:{
+    color:'#000',
+    fontSize:18,
+    marginVertical:2
+  },
+  parentView:{
+    alignItems:'center',
+    justifyContent:'center'
+  }
 });
 
 export default OutputModal;
