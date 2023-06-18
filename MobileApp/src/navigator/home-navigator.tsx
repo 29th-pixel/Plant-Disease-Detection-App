@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Platform } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { BOTTOM_TAB_COLOR,TAB_ICON_COLOR,TAB_INACTIVE_COLOR } from "../utils/constants/colors";
 
 import { HomeScreen,DiseaseDetectorScreen,ContactScreen } from "../screens/home";
 
@@ -52,7 +53,7 @@ export const HomeTabNavigator=()=>{
             
             headerShown: false,
             tabBarStyle: {
-              backgroundColor: '#FAFAFA',
+              backgroundColor: BOTTOM_TAB_COLOR,
               height: Platform.OS === 'android' ? 60 : 80,
               
             },
@@ -62,7 +63,8 @@ export const HomeTabNavigator=()=>{
             tabBarLabelStyle:{
                 fontSize:12
             },
-            tabBarActiveTintColor:'#00C853'
+            tabBarActiveTintColor:TAB_ICON_COLOR,
+            tabBarInactiveTintColor:TAB_INACTIVE_COLOR
           }}>
             <Tab.Screen name="HomeScreenTab" component={HomeStackNavigator} options={{tabBarLabel:'Home',tabBarIcon:HomeTabIcon}} />
             <Tab.Screen name="ContactScreen" component={ContactScreen} options={{tabBarLabel:'Contact',tabBarIcon:ContactTabIcon}} />

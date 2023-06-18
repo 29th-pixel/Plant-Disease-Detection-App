@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
-import { PRIMARY_WHITE,PRIMARY_ACCENT } from "../constants/colors";
+import {BACKGROUND_COLOR,TEXT_COLOR,TITLE_COLOR } from "../constants/colors";
 
 export const commonStyles=StyleSheet.create({
     parentContainer:{
         flex:1,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor:PRIMARY_WHITE,
+        backgroundColor:BACKGROUND_COLOR,
         paddingHorizontal:8
     },
     image:{
@@ -14,11 +14,11 @@ export const commonStyles=StyleSheet.create({
         marginVertical:2
     },
     text:{
-        color:PRIMARY_ACCENT,
+        color:TEXT_COLOR,
         marginVertical:2,
     },
     titleText:{
-        color:PRIMARY_ACCENT,
+        color:TITLE_COLOR,
         fontSize:24,
         fontWeight:'bold',
         marginVertical:8

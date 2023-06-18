@@ -5,7 +5,7 @@ import { commonStyles } from '../../utils/styles/common-styles';
 
 import { data as contactData } from '../../utils/contact-data';
 import ContactItem from '../../components/contact-item';
-import { PRIMARY_GREEN } from '../../utils/constants/colors';
+import { BACKGROUND_COLOR } from '../../utils/constants/colors';
 
 export type contactDataType={
   name:string;
@@ -21,7 +21,7 @@ const ContactScreen = () => {
     )
   },[])
   return (
-    <SafeAreaProvider style={[commonStyles.parentContainer,{backgroundColor:PRIMARY_GREEN,}]}>
+    <SafeAreaProvider style={[commonStyles.parentContainer,{backgroundColor:BACKGROUND_COLOR,}]}>
       <Text style={commonStyles.titleText}>Our Team of Developers👨🏻‍💻</Text>
       <FlatList
         data={contactData}

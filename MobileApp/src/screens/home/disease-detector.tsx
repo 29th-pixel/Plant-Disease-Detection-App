@@ -4,7 +4,7 @@ import {StyleSheet,Image,Text,ScrollView,Platform} from 'react-native'
 import { commonStyles } from '../../utils/styles/common-styles'
 
 import Button from '../../components/button'
-import { PRIMARY_ACCENT, PRIMARY_GREEN } from '../../utils/constants/colors'
+import { BUTTON_COLOR } from '../../utils/constants/colors'
 
 import ImagePicker, { ImageOrVideo } from 'react-native-image-crop-picker';
 import OutputModal from '../../components/output-modal'
@@ -23,7 +23,7 @@ export type outputData={
 
 const DiseaseDetectorScreen = () => {
   const buttonStyle={
-    backgroundColor:PRIMARY_GREEN,
+    backgroundColor:BUTTON_COLOR,
     marginVertical:8
   }
 

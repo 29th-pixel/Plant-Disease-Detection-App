@@ -4,7 +4,6 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import { commonStyles } from '../../utils/styles/common-styles';
 import { data as imageData } from '../../utils/image-data';
 import ImageItem from '../../components/image-item';
-import { PRIMARY_ACCENT} from '../../utils/constants/colors';
 import Button from '../../components/button';
 
 import type {NavigationProp} from '@react-navigation/native'
@@ -12,7 +11,7 @@ import type { HomeStackParamList } from '../../navigator/home-navigator';
 const HomeScreen = ({navigation}:{navigation:NavigationProp<HomeStackParamList>}) => {
 
   const buttonStyle={
-    backgroundColor:PRIMARY_ACCENT,
+    backgroundColor:'#00FF00',
     width:60,
     height:60,
     borderRadius:100,
@@ -57,7 +56,9 @@ const styles=StyleSheet.create({
     alignItems:'center'
   },
   description:{
-    color:'black'
+    color:'#000000',
+    marginHorizontal:8,
+    marginVertical:8
   }
 })
 

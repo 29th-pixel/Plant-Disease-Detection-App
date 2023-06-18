@@ -1,6 +1,6 @@
 import { Image, View,Text,StyleSheet } from 'react-native';
 import { commonStyles } from '../utils/styles/common-styles';
-import { PRIMARY_WHITE,PRIMARY_GREEN } from '../utils/constants/colors';
+import { LIST_ITEM_COLOR } from '../utils/constants/colors';
 
 type ImageItemProps={
     imageData:{
@@ -20,7 +20,7 @@ const styles=StyleSheet.create({
   parentContainer:{ 
     flex: 1,
     margin:5,
-    backgroundColor:PRIMARY_GREEN,
+    backgroundColor:LIST_ITEM_COLOR,
     padding:4,
     alignItems:'center',
     justifyContent:'center',
@@ -34,7 +34,7 @@ const styles=StyleSheet.create({
   text:{
     fontSize:16,
     fontWeight:'bold',
-    color:PRIMARY_WHITE
+    color:'#ffffff'
   }
 })
 

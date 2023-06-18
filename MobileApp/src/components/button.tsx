@@ -1,6 +1,5 @@
 import React from 'react'
 import {TouchableOpacity,Text,StyleSheet} from 'react-native'
-import { PRIMARY_WHITE } from '../utils/constants/colors'
 
 type ButtonProps={
     title:string;
@@ -24,7 +23,7 @@ const styles=StyleSheet.create({
     justifyContent:'center',
     borderRadius:4
   },
-  text:{color:PRIMARY_WHITE}
+  text:{color:'#000',fontWeight:'bold'}
 })
 
 export default Button

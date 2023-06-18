@@ -3,7 +3,6 @@ import {View,Text,StyleSheet,Linking} from 'react-native'
 
 import type { contactDataType } from '../screens/home/contact-screen'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import { PRIMARY_WHITE } from '../utils/constants/colors'
 
 type ContactItemProps={
     data:contactDataType;
@@ -23,7 +22,7 @@ const ContactItem:React.FC<ContactItemProps> = ({data}) => {
 
 const style=StyleSheet.create({
     parentContainer:{
-    backgroundColor:PRIMARY_WHITE,
+    backgroundColor:'#ffffff',
     padding:12,
     alignItems:'center',
     justifyContent:'center',
